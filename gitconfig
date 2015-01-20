@@ -24,8 +24,8 @@
 [commit]
 	template = /Users/mike/.gitmessage
 [user]
-  name = Mike Coutermarsh
-  email = coutermarsh.mike@gmail.com
+  name = Onur Satici
+  email = onursatici@gmail.com
 [diff]
     tool = Kaleidoscope
 [difftool "Kaleidoscope"]
@@ -41,3 +41,7 @@
 	trustExitCode = true
 [credential]
 	helper = osxkeychain
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true

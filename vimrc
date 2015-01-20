@@ -42,8 +42,8 @@ set notimeout
 
 " highlight vertical column of cursor
 au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline 
-set cursorline 
+au WinEnter * set cursorline
+set cursorline
 
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
@@ -149,10 +149,18 @@ set t_Co=256
 :set ignorecase
 :set noantialias
 
-" Color scheme
+execute pathogen#infect()
+
+" color theme
+let g:solarized_termcolors=256
 colorscheme solarized
-set background=dark
-set encoding=utf-8
+ set background=dark
+ set encoding=utf-8
+
+" gui fonts
+  if has('gui_running')
+  set guifont=SauceCodePowerline-Light:h11
+endif
 
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505
@@ -198,7 +206,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Switch between the last two files
-nnoremap <leader><leader> <c-^>
+nnoremap <c-^><leader> <c-^>
 
 " Get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
