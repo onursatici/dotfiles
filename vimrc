@@ -162,6 +162,12 @@ colorscheme solarized
   set guifont=SauceCodePowerline-Light:h11
 endif
 
+"Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
+
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505
 
