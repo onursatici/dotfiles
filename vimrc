@@ -234,8 +234,16 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-l> <C-w>l
 
 " configure syntastic syntax checking to check on open as well as save
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_enable_highlighting=0
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs=1
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")
@@ -256,6 +264,6 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Easy buffer changing
-map <F6> :bp<CR>
-map <F7> :bn<CR>
+map <F7> :bp<CR>
+map <F8> :bn<CR>
 
