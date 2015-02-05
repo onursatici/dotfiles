@@ -267,3 +267,5 @@ nnoremap <C-H> <C-W><C-H>
 map <F7> :bp<CR>
 map <F8> :bn<CR>
 
+" change NERDtree colors
+hi Directory guifg=#FF0000 ctermfg=153
