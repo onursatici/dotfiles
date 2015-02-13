@@ -1,6 +1,9 @@
 " No audible bell
 set vb
 
+" set antialiasing for fonts
+set antialias
+
 " No toolbar
 set guioptions-=T
 
