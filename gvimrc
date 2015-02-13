@@ -3,6 +3,8 @@ set vb
 
 " set antialiasing for fonts
 set antialias
+" remove scrollbar
+set guioptions = r
 
 " No toolbar
 set guioptions-=T
