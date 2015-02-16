@@ -212,7 +212,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 " Switch between the last two files
-nnoremap <c-^><leader> <c-^>
+" nnoremap <c-^><leader> <c-^>
 
 
 " Treat <li> and <p> tags like the block tags they are
@@ -263,7 +263,7 @@ map <F7> :bp<CR>
 map <F8> :bn<CR>
 
 " change NERDtree colors
-hi Directory guifg=#FF0000 ctermfg=153
+hi Directory guifg=#6BA9B7 ctermfg=153
 
 " change cursor on insert mode
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -276,3 +276,6 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " set mouse on
 set mouse=a
+
+" to set whitespace show as whitespace use this
+" set nolist

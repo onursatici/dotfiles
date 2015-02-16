@@ -4,7 +4,7 @@ set vb
 " set antialiasing for fonts
 set antialias
 " remove scrollbar
-set guioptions = r
+set guioptions=r
 
 " No toolbar
 set guioptions-=T
@@ -16,4 +16,3 @@ set guioptions+=c
 if filereadable($HOME . "/.gvimrc.local")
   source ~/.gvimrc.local
 endif
-
