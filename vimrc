@@ -3,6 +3,15 @@ runtime macros/matchit.vim
 " use old regext engine. speed up ruby syntax highlighting
 set re=1
 
+" vundle init
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+call vundle#end()
+filetype plugin indent on
+
 set ttyfast
 set lazyredraw
 
@@ -57,7 +66,6 @@ cabbrev tf tabfirst
 cabbrev tl tablast
 
 set backspace=2   " Backspace deletes like most programs in insert mode
-set nocompatible  " Use Vim settings, rather then Vi settings
 set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
@@ -149,7 +157,7 @@ set t_Co=256
 :set ignorecase
 :set noantialias
 
-execute pathogen#infect()
+"execute pathogen#infect()
 
 " color theme
 let g:solarized_termcolors=256
