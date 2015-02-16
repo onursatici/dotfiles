@@ -222,7 +222,6 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 " Switch between the last two files
 " nnoremap <c-^><leader> <c-^>
 
-
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
@@ -267,8 +266,8 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Easy buffer changing
-map <F7> :bp<CR>
-map <F8> :bn<CR>
+"map <F7> :bp<CR>
+"map <F8> :bn<CR>
 
 " change NERDtree colors
 hi Directory guifg=#6BA9B7 ctermfg=153
@@ -287,3 +286,14 @@ set mouse=a
 
 " to set whitespace show as whitespace use this
 " set nolist
+
+"set easy buffer navigation
+map <leader>x :bdelete<CR>
+map <leader>. :bn<CR>
+map <leader>, :bp<CR>
+
+"set easy vim pane size adjustments
+map <leader><Right> <C-W>5>
+map <leader><Left> <C-W>5<
+map <leader><Up> <C-W>3+
+map <leader><Down> <C-W>3-
