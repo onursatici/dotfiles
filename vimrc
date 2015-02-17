@@ -297,3 +297,6 @@ map <leader><Right> <C-W>5>
 map <leader><Left> <C-W>5<
 map <leader><Up> <C-W>3+
 map <leader><Down> <C-W>3-
+
+"auto comment disable
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
