@@ -48,4 +48,5 @@ Bundle 'maksimr/vim-jsbeautify'
 Bundle 'terryma/vim-multiple-cursors'
 Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-obsession'
+Bundle 'wavded/vim-stylus'
 filetype on
