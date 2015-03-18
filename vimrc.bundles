@@ -50,4 +50,5 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'tpope/vim-obsession'
 Bundle 'wavded/vim-stylus'
 Bundle 'Chiel92/vim-autoformat'
+Bundle 'toyamarinyon/vim-swift'
 filetype on
