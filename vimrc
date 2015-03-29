@@ -32,7 +32,7 @@ map <Leader>q :qall<CR>
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+"map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
 
@@ -303,3 +303,21 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " remove search highlights
 map <leader>n :nohl<CR>
+
+" dash mappings
+map <leader>d :Dash<CR>
+
+" swap block mode with visual
+nnoremap    v   <C-V>
+nnoremap <C-V>     v
+vnoremap    v   <C-V>
+vnoremap <C-V>     v
+
+" dragVisuals
+runtime plugin/dragvisuals.vim
+vmap  <expr>  <left>   DVB_Drag('left')
+vmap  <expr>  <right>  DVB_Drag('right')
+vmap  <expr>  <down>   DVB_Drag('down')
+vmap  <expr>  <up>     DVB_Drag('up')
+vmap  <expr>  D        DVB_Duplicate()
+let g:DVB_TrimWS = 1
