@@ -57,4 +57,5 @@ Bundle 'vim-scripts/cecutil'
 Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/vis'
 Bundle 'atweiden/vim-dragvisuals'
+Bundle 'mattn/emmet-vim'
 filetype on
