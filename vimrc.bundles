@@ -58,4 +58,5 @@ Bundle 'vim-scripts/Align'
 Bundle 'vim-scripts/vis'
 Bundle 'atweiden/vim-dragvisuals'
 Bundle 'mattn/emmet-vim'
+Bundle 'majutsushi/tagbar'
 filetype on

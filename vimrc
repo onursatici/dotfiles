@@ -292,10 +292,12 @@ map <leader>. :bn<CR>
 map <leader>, :bp<CR>
 
 "set easy vim pane size adjustments
-map <leader><Right> <C-W>5>
-map <leader><Left> <C-W>5<
-map <leader><Up> <C-W>3+
-map <leader><Down> <C-W>3-
+map ¬ <C-W>>
+map ˙ <C-W><
+map ˚ <C-W>+
+map ∆ <C-W>-
+
+
 
 " disable auto-commenting on new line
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
@@ -320,3 +322,6 @@ vmap  <expr>  <down>   DVB_Drag('down')
 vmap  <expr>  <up>     DVB_Drag('up')
 vmap  <expr>  D        DVB_Duplicate()
 let g:DVB_TrimWS = 1
+
+" bind tagbar to f8
+nmap <F8> :TagbarToggle<CR>

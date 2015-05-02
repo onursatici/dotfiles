@@ -38,5 +38,10 @@ alias gi="gem install"
 alias rk="rake"
 alias rc="bundle exec rails c"
 
+#matlab
+alias matlabs="/Applications/MATLAB_R2014b.app/bin/matlab -nojvm -nodisplay -nosplash"
+alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
