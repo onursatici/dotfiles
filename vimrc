@@ -156,9 +156,8 @@ set t_Co=256
 :set ignorecase
 :set noantialias
 
-"execute pathogen#infect()
 
-" color theme
+"" color theme
 let g:solarized_termcolors=256
 colorscheme solarized
  set background=dark
@@ -191,11 +190,11 @@ set undofile
 set undolevels=1000
 set undoreload=10000
 
-:nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
-:nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
-:xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+":nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+":nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
+":nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
+":xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
+":xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
 
 " convert hash rockets
 nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
@@ -325,3 +324,4 @@ let g:DVB_TrimWS = 1
 
 " bind tagbar to f8
 nmap <F8> :TagbarToggle<CR>
+

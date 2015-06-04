@@ -59,4 +59,6 @@ Bundle 'vim-scripts/vis'
 Bundle 'atweiden/vim-dragvisuals'
 Bundle 'mattn/emmet-vim'
 Bundle 'majutsushi/tagbar'
+Bundle 'octol/vim-cpp-enhanced-highlight'
+Bundle 'zerowidth/vim-copy-as-rtf'
 filetype on
