@@ -14,6 +14,7 @@ filetype plugin indent on
 
 set ttyfast
 set lazyredraw
+set clipboard=unnamed
 
 let g:ruby_path="~/.rvm/bin/ruby"
 
