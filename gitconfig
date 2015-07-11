@@ -23,7 +23,7 @@
 [include]
   path = .gitconfig.local
 [commit]
-	template = /Users/mike/.gitmessage
+	template = /Users/onursatici/.gitmessage
 [user]
   name = Onur Satici
   email = onursatici@gmail.com

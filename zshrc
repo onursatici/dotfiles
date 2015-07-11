@@ -44,3 +44,5 @@ export PATH=".git/safe/../../bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH="/Users/onursatici/go/bin"
 export PATH="$PATH:$GOPATH"
+
+set -o vi
