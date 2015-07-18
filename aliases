@@ -1,7 +1,7 @@
+# spotify
 alias s="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt"
 alias sn="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt next"
 alias sp="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt prev"
-# Now playing: Cher - Believe
 alias sb="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt start spotify:track:2goLsvvODILDzeeiT4dAoR"
 
 # Unix
@@ -17,6 +17,9 @@ alias -g M='| less'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
+
+#tree
+alias tre="tree -I 'node_modules'"
 
 # fix for passing params to rake tasks
 alias rake='noglob rake'
@@ -41,6 +44,7 @@ alias rc="bundle exec rails c"
 #matlab
 alias matlabs="/Applications/MATLAB_R2014b.app/bin/matlab -nojvm -nodisplay -nosplash"
 alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
+
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
