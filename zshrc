@@ -50,7 +50,7 @@ set -o vi
 # explain shell commands in shell
 explain () {
   if [ "$#" -eq 0 ]; then
-    while read cmd; do
+    while vared -p "Commnad: "  -c cmd; do
       curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols) --data-urlencode "q=$cmd"
     done
     echo "Bye!"
