@@ -174,7 +174,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Numbers
 set number
-set numberwidth=5
+set numberwidth=1
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
