@@ -154,7 +154,7 @@ set t_Co=256
 
 "" color theme
 "let g:solarized_termcolors=256
-colorscheme base16-ocean
+colorscheme base16-default
  set background=dark
  set encoding=utf-8
 
