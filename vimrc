@@ -29,12 +29,6 @@ let g:session_autoload = 'no'
 let mapleader = "\<Space>"
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
-"
-" RSpec.vim mappings
-"map <Leader>t :call RunCurrentSpecFile()<CR>
-"map <Leader>s :call RunNearestSpec()<CR>
-"map <Leader>l :call RunLastSpec()<CR>
-"map <Leader>a :call RunAllSpecs()<CR>
 
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
@@ -70,7 +64,7 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=500
-set ruler         " show the cursor position all the time
+"set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set hlsearch      " highlight matches
@@ -150,7 +144,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-let g:airline_theme='solarized'
+"let g:airline_theme='solarized'
 set t_Co=256
 
 :set smartcase
@@ -159,8 +153,8 @@ set t_Co=256
 
 
 "" color theme
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme base16-ocean
  set background=dark
  set encoding=utf-8
 
@@ -197,8 +191,6 @@ set undoreload=10000
 ":xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
 ":xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
 
-" convert hash rockets
-nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -218,8 +210,6 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-" Switch between the last two files
-" nnoremap <c-^><leader> <c-^>
 
 " Treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
@@ -264,12 +254,10 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Easy buffer changing
-"map <F7> :bp<CR>
-"map <F8> :bn<CR>
+
 
 " change NERDtree colors
-hi Directory guifg=#6BA9B7 ctermfg=153
+"hi Directory guifg=#6BA9B7 ctermfg=153
 
 " change cursor on insert mode
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
@@ -282,9 +270,6 @@ autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
 
 " set mouse on
 set mouse=a
-
-" to set whitespace show as whitespace use this
-" set nolist
 
 "set easy buffer navigation
 map <leader>x :bdelete<CR>
