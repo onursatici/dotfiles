@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/Users/onursatici/Documents/workspace/nomework'
+let g:netrw_dirhist_2='/Users/onursatici/Documents/workspace/nomework/server/data-adapter'
+let g:netrw_dirhist_3='/Users/onursatici/Documents/workspace/nomework/server'
+let g:netrw_dirhist_4='/Users/onursatici/Documents/workspace/nomework'
