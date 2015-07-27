@@ -7,22 +7,15 @@ dotfiles
 Clone this repo (or your own fork!) to your home directory.
 ```
 $ cd ~
-$ git clone https://github.com/mscoutermarsh/dotfiles
+$ git clone https://github.com/onursatici/dotfiles
+```
+symlink files in the dotfiles folder
+```
+$ sh dotfiles/install/install.sh
 ```
 
-Install rcm
-
-```
-$ brew tap thoughtbot/formulae
-$ brew install rcm
-```
-
-Run rcm
-```
-$ env RCRC=$HOME/dotfiles/rcrc rcup
-```
-### Git Config
-Make sure you update ```gitconfig``` with your own name and email address. Otherwise you'll be committing as me. :smile_cat:
+### Gitconfig
+don't forget to change the name in gitconfig with your username
 
 ### Recommended
 
