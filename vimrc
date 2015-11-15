@@ -31,7 +31,7 @@ map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
 
 " Toggle nerdtree with F10
-map <F10> :NERDTreeToggle<CR>
+map <Leader>/ :NERDTreeToggle<CR>
 " Current file in nerdtree
 map <F9> :NERDTreeFind<CR>
 
@@ -291,7 +291,8 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 map <leader>n :nohl<CR>
 
 " dash mappings
-map <leader>d :Dash<CR>
+"map <leader>d :Dash<CR>
+
 
 " swap block mode with visual
 nnoremap    v   <C-V>
@@ -309,5 +310,5 @@ vmap  <expr>  D        DVB_Duplicate()
 let g:DVB_TrimWS = 1
 
 " bind tagbar to f8
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>d :TagbarToggle<CR>
 

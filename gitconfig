@@ -6,6 +6,7 @@
   aa = add --all
   ap = add --patch
   ca = commit --amend
+  cm = commit -m
   ci = commit -v
   co = checkout
   create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -

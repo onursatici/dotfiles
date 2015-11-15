@@ -63,4 +63,5 @@ Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'zerowidth/vim-copy-as-rtf'
 Bundle 'chriskempson/base16-vim'
 Bundle 'elixir-lang/vim-elixir'
+Bundle 'briancollins/vim-jst'
 filetype on
