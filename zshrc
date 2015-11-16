@@ -3,7 +3,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 # custom prompt arguments
-prompt cloud ">" "black" "blue"
+prompt sorin
 # history settings
 setopt appendhistory histignoredups
 setopt histignorespace extended_history
