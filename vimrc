@@ -1,14 +1,14 @@
 set shell=/bin/bash
 runtime macros/matchit.vim
-" use old regext engine. speed up ruby syntax highlighting
-set re=1
 
 " vundle init
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+if filereadable(expand("~/.vimrc.bundles"))
+  source ~/.vimrc.bundles
+endif
 call vundle#end()
 filetype plugin indent on
 
@@ -80,9 +80,6 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
 
 filetype plugin indent on
 
@@ -174,7 +171,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Numbers
 set number
-set numberwidth=1
+"set numberwidth=1
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
