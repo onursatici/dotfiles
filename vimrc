@@ -171,7 +171,8 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Numbers
 set number
-"set numberwidth=1
+" below works for macvim
+set numberwidth=1
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
