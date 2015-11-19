@@ -310,3 +310,6 @@ let g:DVB_TrimWS = 1
 " bind tagbar to f8
 nmap <leader>d :TagbarToggle<CR>
 
+"set folder glyphs on
+let g:DevIconsEnableFoldersOpenClose = 1
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1

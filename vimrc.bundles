@@ -64,4 +64,5 @@ Bundle 'zerowidth/vim-copy-as-rtf'
 Bundle 'chriskempson/base16-vim'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'briancollins/vim-jst'
+Bundle 'ryanoasis/vim-devicons'
 filetype on
