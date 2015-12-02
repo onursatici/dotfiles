@@ -14,6 +14,7 @@ alias ll='ls -al'
 alias lh='ls -Alh'
 alias -g G='| grep'
 alias -g M='| less'
+alias -g A='| ag'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
