@@ -33,7 +33,7 @@ map <Leader>q :qall<CR>
 " Toggle nerdtree with F10
 map <Leader>/ :NERDTreeToggle<CR>
 " Current file in nerdtree
-map <F9> :NERDTreeFind<CR>
+map <Leader>? :NERDTreeFind<CR>
 
 " Reduce timeout after <ESC> is recvd. This is only a good idea on fast links.
 set ttimeout
@@ -313,3 +313,5 @@ nmap <leader>d :TagbarToggle<CR>
 "set folder glyphs on
 let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
+
+imap <C-E> <C-Y>,

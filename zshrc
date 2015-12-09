@@ -44,6 +44,8 @@ export PATH=".git/safe/../../bin:$PATH"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH="/Users/onursatici/go/bin"
 export PATH="$PATH:$GOPATH"
+# include php 5.6 path
+export PATH="/usr/local/php5/bin:$PATH"
 
 set -o vi
 
@@ -61,4 +63,18 @@ explain () {
     echo "explain                  interactive mode."
     echo "explain 'cmd -o | ...'   one quoted command to explain it."
   fi
+}
+
+# Determine size of a file or total size of a directory
+function fs() {
+  if du -b /dev/null > /dev/null 2>&1; then
+    local arg=-sbh;
+  else
+    local arg=-sh;
+  fi
+  if [[ -n "$@" ]]; then
+    du $arg -- "$@";
+  else
+    du $arg .[^.]* *;
+  fi;
 }
