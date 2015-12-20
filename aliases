@@ -12,9 +12,11 @@ alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
+alias pyg="pygmentize"
 alias -g G='| grep'
 alias -g L='| less'
 alias -g A='| ag'
+#alias -g P='| pygmentize -l'
 alias -g ONE="| awk '{ print \$1}'"
 alias e="$EDITOR"
 alias v="$VISUAL"
@@ -29,6 +31,7 @@ alias rake='noglob rake'
 # git
 alias g='git'
 alias gs='git status -sb'
+alias gdiff='git difftool $(git rev-parse HEAD~1) $(git rev-parse HEAD)'
 
 # Bundler
 alias b="bundle"
