@@ -75,6 +75,10 @@ fi
 #quicklook alias
 alias ql="qlmanage -p 2>/dev/null"
 
+#currency converter helper
+
+alias fx="node ~/dotfiles/helpers/CurrencyConverter.js"
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
