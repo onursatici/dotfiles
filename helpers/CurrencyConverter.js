@@ -5,9 +5,16 @@ var fromCurrency = process.argv[2] || 'usd';
 var toCurrency = process.argv[3] || 'try';
 var amount = process.argv[4] || 1;
 
-if(process.argv[2] === '-h'){
+if(process.argv[2] === '-h' || process.argv[2] === '--help'){
   console.log('usage: fx <from> <to> <amount>');
+  console.log('or     fx <from> <amount>');
+  console.log('change defaults to fit your needs');
   process.exit();
+}
+
+if(!isNaN(process.argv[3])){
+  amount = process.argv[3];
+  toCurrency = 'try';
 }
 
 function parseResult(res){
