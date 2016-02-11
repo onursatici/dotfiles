@@ -1,9 +1,3 @@
-# spotify
-alias s="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt"
-alias sn="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt next"
-alias sp="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt prev"
-alias sb="osascript ~/dotfiles/SpotifyControl/SpotifyControl.scpt start spotify:track:2goLsvvODILDzeeiT4dAoR"
-
 # Unix
 alias tlf="tail -f"
 alias ln='ln -v'
@@ -76,7 +70,6 @@ fi
 alias ql="qlmanage -p 2>/dev/null"
 
 #currency converter helper
-
 alias fx="node ~/dotfiles/helpers/CurrencyConverter.js"
 
 # Include custom aliases

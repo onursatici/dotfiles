@@ -47,7 +47,17 @@ path=(
   $path
 )
 
+# mkdir .git/safe in the root of repositories you trust
+export PATH=".git/safe/../../bin:$PATH"
 export PATH="$PATH:/opt/local/bin"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export GOPATH="/Users/onursatici/go/bin"
+export PATH="$PATH:$GOPATH"
+# include php 5.6 path
+export PATH="/usr/local/php5/bin:$PATH"
+# override system zsh
+export PATH="/usr/local/bin:$PATH"
+
 
 export PYTHONPATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:$PATH"
 

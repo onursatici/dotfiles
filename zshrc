@@ -35,17 +35,10 @@ if which rbenv &>/dev/null ; then
   eval "$(rbenv init - --no-rehash)"
 fi
 
-# mkdir .git/safe in the root of repositories you trust
-export PATH=".git/safe/../../bin:$PATH"
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export GOPATH="/Users/onursatici/go/bin"
-export PATH="$PATH:$GOPATH"
-# include php 5.6 path
-export PATH="/usr/local/php5/bin:$PATH"
 
 set -o vi
 

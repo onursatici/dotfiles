@@ -311,7 +311,9 @@ let g:DVB_TrimWS = 1
 nmap <leader>d :TagbarToggle<CR>
 
 "set folder glyphs on
-let g:DevIconsEnableFoldersOpenClose = 1
+"below line does not work for new NerdTree versions
+"https://github.com/ryanoasis/vim-devicons/issues/130
+"let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 imap <C-E> <C-Y>,
