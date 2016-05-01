@@ -40,6 +40,8 @@ alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
 
 #custom
 alias workspace="cd ~/Documents/workspace"
+alias til="cd ~/Documents/workspace/learning/til"
+#alias todo="~/Documents/workspace/pytodo/run.py"
 
 # colourizer
 GRC=`which grc`
@@ -71,6 +73,9 @@ alias ql="qlmanage -p 2>/dev/null"
 
 #currency converter helper
 alias fx="node ~/dotfiles/helpers/CurrencyConverter.js"
+
+#today's date helper
+alias -g today=$(echo `date +%Y%m%d`.md)
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

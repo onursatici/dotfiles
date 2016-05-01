@@ -61,6 +61,8 @@ export PATH="/usr/local/bin:$PATH"
 
 export PYTHONPATH="/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/site-packages:$PATH"
 
+export JAVA_HOME="$(/usr/libexec/java_home)"
+
 #
 # Less
 #

@@ -44,9 +44,9 @@ set notimeout
 " uses expression to extract path from current file's path
 
 " highlight vertical column of cursor
-"au WinLeave * set nocursorline nocursorcolumn
-"au WinEnter * set cursorline
-"set cursorline
+au WinLeave * set nocursorline nocursorcolumn
+au WinEnter * set cursorline
+set cursorline
 
 "key to insert mode with paste using F2 key
 map <F2> :set paste<CR>i
@@ -76,9 +76,9 @@ let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-endif
+"if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
+  "syntax on
+"endif
 
 
 filetype plugin indent on
@@ -105,8 +105,16 @@ augroup vimrcEx
   autocmd FileType markdown setlocal spell
 
   " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  "autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+
+  " handlebars and mustache auto filetype detection does not work, so here it is added manually
+  " change the filetype to html.mustache if using mustache in an html document
+  autocmd  BufNewFile,BufRead *.mustache,*.hogan,*.hulk,*.hjs,*.moustache set filetype=mustache syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+  autocmd  BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+  autocmd  BufNewFile,BufRead *.scala set filetype=scala syntax=scala | runtime! ftplugin/scala.vim ftplugin/scala/*.vim
+
 augroup END
+
 
 " bind K to search word under cursor
 nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
@@ -317,3 +325,18 @@ nmap <leader>d :TagbarToggle<CR>
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 imap <C-E> <C-Y>,
+
+" set syntastic javac to work smoothly with gradle
+
+let g:syntastic_java_checkers=['javac']
+let g:syntastic_java_javac_config_file_enabled = 1
+
+" in progress, complete to open the nearest md file
+function OpenPreviousFile()
+  " fix below after new relelase of todo-md
+  let shellcmd = "~/Documents/workspace/pytodo/todo get-previous-file " . expand("%:t")
+  let output=system(shellcmd)
+  execute "e ".output
+endfunction
+
+nmap <leader>b :call OpenPreviousFile()<CR>
