@@ -2,7 +2,7 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-# custom prompt arguments
+
 prompt sorin
 # history settings
 setopt appendhistory histignoredups
@@ -42,21 +42,6 @@ fi
 
 set -o vi
 
-# explain shell commands in shell
-explain () {
-  if [ "$#" -eq 0 ]; then
-    while vared -p "Commnad: "  -c cmd; do
-      curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols) --data-urlencode "q=$cmd"
-    done
-    echo "Bye!"
-  elif [ "$#" -eq 1 ]; then
-    curl -Gs "https://www.mankier.com/api/explain/?cols="$(tput cols) --data-urlencode "q=$1"
-  else
-    echo "Usage"
-    echo "explain                  interactive mode."
-    echo "explain 'cmd -o | ...'   one quoted command to explain it."
-  fi
-}
 
 # Determine size of a file or total size of a directory
 function fs() {
@@ -71,3 +56,9 @@ function fs() {
     du $arg .[^.]* *;
   fi;
 }
+
+if (( $+commands[tag] )); then
+  tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
+  alias ag=tag
+fi
+source /usr/local/dev-env/bin/profile

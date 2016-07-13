@@ -10,6 +10,7 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 call vundle#end()
+filetype off
 filetype plugin indent on
 
 set ttyfast
@@ -109,15 +110,15 @@ augroup vimrcEx
 
   " handlebars and mustache auto filetype detection does not work, so here it is added manually
   " change the filetype to html.mustache if using mustache in an html document
-  autocmd  BufNewFile,BufRead *.mustache,*.hogan,*.hulk,*.hjs,*.moustache set filetype=mustache syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-  autocmd  BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-  autocmd  BufNewFile,BufRead *.scala set filetype=scala syntax=scala | runtime! ftplugin/scala.vim ftplugin/scala/*.vim
+  "autocmd  BufNewFile,BufRead *.mustache,*.hogan,*.hulk,*.hjs,*.moustache set filetype=mustache syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+  "autocmd  BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
+  "autocmd  BufNewFile,BufRead *.scala set filetype=scala syntax=scala | runtime! ftplugin/scala.vim ftplugin/scala/*.vim
 
 augroup END
 
 
 " bind K to search word under cursor
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>:cw<CR>
+nnoremap K :Ag "\b<C-R><C-W>\b"<CR>
 
 " Softtabs, 2 spaces
 set tabstop=2
@@ -340,3 +341,7 @@ function OpenPreviousFile()
 endfunction
 
 nmap <leader>b :call OpenPreviousFile()<CR>
+
+"syntastic toggle map
+let g:syntastic_mode_map = {'mode': 'passive', 'active_filetypes': [], 'passive_filetypes': [] }
+nnoremap <leader>e :SyntasticCheck<CR>

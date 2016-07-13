@@ -41,7 +41,7 @@ alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
 #custom
 alias workspace="cd ~/Documents/workspace"
 alias til="cd ~/Documents/workspace/learning/til"
-#alias todo="~/Documents/workspace/pytodo/run.py"
+alias dev="/usr/local/dev-env/bin/dev"
 
 # colourizer
 GRC=`which grc`

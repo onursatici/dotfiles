@@ -68,4 +68,5 @@ Bundle 'ryanoasis/vim-devicons'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'vim-scripts/groovy.vim'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'ianks/vim-tsx'
 filetype on
