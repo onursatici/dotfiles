@@ -3,7 +3,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-prompt sorin
+export PROMPT='%B%F{yellow}$%f%b %B%F{white}%c%f%b '
+export SPROMPT='zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? '
+
 # history settings
 setopt appendhistory histignoredups
 setopt histignorespace extended_history

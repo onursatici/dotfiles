@@ -91,4 +91,3 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 if [[ ! -d "$TMPPREFIX" ]]; then
   mkdir -p "$TMPPREFIX"
 fi
-[ -f /opt/boxen/env.sh ] && source /opt/boxen/env.sh

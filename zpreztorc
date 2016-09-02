@@ -30,14 +30,14 @@ zstyle ':prezto:load' pmodule \
   'history' \
   'directory' \
   'spectrum' \
-  'prompt' \
   'utility' \
-  'tmux' \
   'completion' \
   'history-substring-search' \
   'git' \
   'osx' \
-  'syntax-highlighting'
+  'syntax-highlighting' 
+  #'prompt'
+  #'tmux' \
 
 #
 # Editor
@@ -122,12 +122,12 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Set syntax highlighters.
 # By default, only the main highlighter is enabled.
- zstyle ':prezto:module:syntax-highlighting' highlighters \
-   'main' \
-   'brackets' \
-   'pattern' \
-   'cursor' \
-   'root'
+ #zstyle ':prezto:module:syntax-highlighting' highlighters \
+   #'main' \
+   #'brackets' \
+   #'pattern' \
+   #'cursor' \
+   #'root'
 
 # Set syntax highlighting styles.
 #zstyle ':prezto:module:syntax-highlighting' styles \
