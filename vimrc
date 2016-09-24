@@ -98,21 +98,8 @@ augroup vimrcEx
     \   exe "normal g`\"" |
     \ endif
 
-  " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
-  autocmd BufRead,BufNewFile *.md set filetype=markdown
-
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
-
-  " Automatically wrap at 80 characters for Markdown
-  "autocmd BufRead,BufNewFile *.md setlocal textwidth=80
-
-  " handlebars and mustache auto filetype detection does not work, so here it is added manually
-  " change the filetype to html.mustache if using mustache in an html document
-  "autocmd  BufNewFile,BufRead *.mustache,*.hogan,*.hulk,*.hjs,*.moustache set filetype=mustache syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-  "autocmd  BufNewFile,BufRead *.handlebars,*.hbs set filetype=html.handlebars syntax=mustache | runtime! ftplugin/mustache.vim ftplugin/mustache*.vim ftplugin/mustache/*.vim
-  "autocmd  BufNewFile,BufRead *.scala set filetype=scala syntax=scala | runtime! ftplugin/scala.vim ftplugin/scala/*.vim
 
 augroup END
 
@@ -147,10 +134,14 @@ endif
 " Airline
 let g:airline_powerline_fonts = 1
 if !exists('g:airline_symbols')
-    let g:airline_symbols = {}
+  let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-"let g:airline_theme='solarized'
+let g:airline_left_sep=''
+let g:airline_left_alt_sep=''
+let g:airline_right_sep=''
+let g:airline_right_alt_sep=''
+
 set t_Co=256
 
 :set smartcase
@@ -160,9 +151,9 @@ set t_Co=256
 
 "" color theme
 "let g:solarized_termcolors=256
+set background=dark
+set encoding=utf-8
 colorscheme base16-default
- set background=dark
- set encoding=utf-8
 
 " gui fonts
   if has('gui_running')
