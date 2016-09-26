@@ -8,63 +8,56 @@ call vundle#rc()
 
 " Let Vundle manage Vundle
 Bundle 'gmarik/vundle'
-" Define bundles via Github repos
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-fugitive'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'blarghmatey/split-expander'
-Bundle 'rking/ag.vim'
-Bundle 'sjl/vitality.vim'
-Bundle 'ctrlpvim/ctrlp.vim'
-"Bundle 'thoughtbot/vim-rspec'
-"Bundle 'tpope/vim-bundler'
-Bundle 'airblade/vim-gitgutter'
-Bundle 'bling/vim-airline'
-"Bundle 'tpope/vim-endwise'
-Bundle 'tpope/vim-surround'
+" bunch of default set calls to make vim sane
+Bundle 'tpope/vim-sensible' 
+" enhances % match to include tags
 Bundle 'tmhedberg/matchit'
-"Bundle 'kana/vim-textobj-user'
-"Bundle 'nelstrom/vim-textobj-rubyblock'
-"Bundle 'vim-scripts/tComment'
+" git integration
+Bundle 'tpope/vim-fugitive'
+" show modified lines from the last commit
+Bundle 'airblade/vim-gitgutter'
+" search with ag from vim
+Bundle 'rking/ag.vim'
+" open files in current working directory with fuzzy search, using ctrl-p. can also be customized to use ag
+Bundle 'ctrlpvim/ctrlp.vim'
+" append information about the file on the bottom buffer bar
+Bundle 'bling/vim-airline'
+" file directory tree
 Bundle 'scrooloose/nerdtree'
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-"Bundle "skwp/greplace.vim"
-"Bundle "vim-ruby/vim-ruby"
+" syntax check for various filetypes
 Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-haml"
+" map all motions to a letter for fast navigation
 Bundle 'Lokaltog/vim-easymotion'
-Bundle "dkprice/vim-easygrep"
-"Bundle "tpope/vim-rails"
-Bundle "altercation/vim-colors-solarized"
+" display relative line numbers in normal mode
 Bundle "myusuf3/numbers.vim"
+" unify window switching shortcuts for vim and tmux
 Bundle 'christoomey/vim-tmux-navigator'
-"Bundle 'jgdavey/tslime.vim'
-"Bundle 'henrik/vim-qargs'
-Bundle 'kchmck/vim-coffee-script'
+" add auto closing of paranthesis on insert mode
 Bundle 'Raimondi/delimitMate'
+" add comments easier
 Bundle 'scrooloose/nerdcommenter'
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'terryma/vim-multiple-cursors'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'tpope/vim-obsession'
-Bundle 'wavded/vim-stylus'
-"Bundle 'Chiel92/vim-autoformat'
-Bundle 'toyamarinyon/vim-swift'
-"Bundle 'rizzatti/dash.vim'
-Bundle 'digitaltoad/vim-jade'
-"Bundle 'vim-scripts/cecutil'
-"Bundle 'vim-scripts/Align'
-"Bundle 'vim-scripts/vis'
-"Bundle 'atweiden/vim-dragvisuals'
+" emmet type expansions in vim
 Bundle 'mattn/emmet-vim'
+" requires ctags. Adds pane to show file tags
 Bundle 'majutsushi/tagbar'
-Bundle 'octol/vim-cpp-enhanced-highlight'
+" for OSX, copy the selection as RTF to the clipboard
 Bundle 'zerowidth/vim-copy-as-rtf'
+" base16 colorscheme support
 Bundle 'chriskempson/base16-vim'
+" unicode icons for files in NERDTree and airline
+Bundle 'ryanoasis/vim-devicons'
+
+" syntax / filetype supports
+Bundle 'mustache/vim-mustache-handlebars'
+Bundle "tpope/vim-haml"
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'jelera/vim-javascript-syntax'
+Bundle 'wavded/vim-stylus'
+Bundle 'toyamarinyon/vim-swift'
+Bundle 'digitaltoad/vim-jade'
+Bundle 'octol/vim-cpp-enhanced-highlight'
 Bundle 'elixir-lang/vim-elixir'
 Bundle 'briancollins/vim-jst'
-Bundle 'ryanoasis/vim-devicons'
 Bundle 'leafgarland/typescript-vim'
 Bundle 'vim-scripts/groovy.vim'
 Bundle 'derekwyatt/vim-scala'
@@ -72,4 +65,8 @@ Bundle 'ianks/vim-tsx'
 Bundle 'rust-lang/rust.vim'
 Bundle 'cespare/vim-toml'
 Bundle 'cstrahan/vim-capnp'
+
+"Bundle 'MarcWeber/vim-addon-mw-utils'
+"Bundle 'tomtom/tlib_vim'
+
 filetype on
