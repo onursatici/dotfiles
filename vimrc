@@ -65,10 +65,12 @@ set t_Co=256
 :set smartcase
 :set ignorecase
 :set noantialias
-"" color theme
+" color theme
 set background=dark
 set encoding=utf-8
 colorscheme base16-default
+" fix error highlighting in Error group, TODO: move this to colorscheme file, get rid of au
+au ColorScheme * hi Error ctermfg=9 ctermbg=10 guifg=White guibg=Red
 
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"

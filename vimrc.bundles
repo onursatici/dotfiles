@@ -1,9 +1,9 @@
-filetype on
+"filetype on
 
-set nocompatible
+"set nocompatible
 
-filetype off
-set rtp+=~/.vim/bundle/vundle/
+"filetype off
+"set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Let Vundle manage Vundle
@@ -28,8 +28,6 @@ Bundle 'scrooloose/nerdtree'
 Bundle "scrooloose/syntastic"
 " map all motions to a letter for fast navigation
 Bundle 'Lokaltog/vim-easymotion'
-" display relative line numbers in normal mode
-Bundle "myusuf3/numbers.vim"
 " unify window switching shortcuts for vim and tmux
 Bundle 'christoomey/vim-tmux-navigator'
 " add auto closing of paranthesis on insert mode
@@ -65,8 +63,5 @@ Bundle 'ianks/vim-tsx'
 Bundle 'rust-lang/rust.vim'
 Bundle 'cespare/vim-toml'
 Bundle 'cstrahan/vim-capnp'
-
-"Bundle 'MarcWeber/vim-addon-mw-utils'
-"Bundle 'tomtom/tlib_vim'
 
 filetype on
