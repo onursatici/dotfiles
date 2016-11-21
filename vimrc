@@ -217,3 +217,6 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 "sane map for emmet
 imap <C-E> <C-Y>,
+
+" disable mappings in elm package
+let g:elm_setup_keybindings = 0

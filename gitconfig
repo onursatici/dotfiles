@@ -3,18 +3,6 @@
 [color]
   ui = auto
 [alias]
-  aa = add --all
-  ap = add --patch
-  ca = commit --amend
-  cm = commit -m
-  ci = commit -v
-  co = checkout
-  create-branch = !sh -c 'git push origin HEAD:refs/heads/$1 && git fetch origin && git branch --track $1 origin/$1 && cd . && git checkout $1' -
-  delete-branch = !sh -c 'git push origin :refs/heads/$1 && git remote prune origin && git branch -D $1' -
-  merge-branch = !git checkout master && git merge @{-1}
-  pr = !hub pull-request
-  st = status
-  up = !git fetch origin && git rebase origin/master
   lg1 = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
   lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
   lg = !"git lg1"
@@ -23,27 +11,9 @@
   autocrlf = input
 [include]
   path = .gitconfig.local
-[commit]
-	template = /Users/onursatici/.gitmessage
-[user]
-  name = Onur Satici
-  email = onursatici@gmail.com
 [diff]
     tool = vimdiff
 [difftool "vimdiff"]
 [mergetool "vimdiff"]
 [credential]
 	helper = osxkeychain
-[filter "media"]
-	required = true
-	clean = git media clean %f
-	smudge = git media smudge %f
-[merge]
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	required = true

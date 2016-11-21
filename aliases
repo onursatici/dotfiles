@@ -71,14 +71,13 @@ fi
 #quicklook alias
 alias ql="qlmanage -p 2>/dev/null"
 
-#currency converter helper
-alias fx="node ~/dotfiles/helpers/CurrencyConverter.js"
-
 #today's date helper
 alias -g today=$(echo `date +%Y%m%d`.md)
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
+# ctags
+alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor"
 
 

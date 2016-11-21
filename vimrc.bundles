@@ -63,5 +63,6 @@ Bundle 'ianks/vim-tsx'
 Bundle 'rust-lang/rust.vim'
 Bundle 'cespare/vim-toml'
 Bundle 'cstrahan/vim-capnp'
+Bundle 'ElmCast/elm-vim'
 
 filetype on
