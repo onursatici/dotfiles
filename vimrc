@@ -72,6 +72,8 @@ colorscheme base16-default
 " fix error highlighting in Error group, TODO: move this to colorscheme file, get rid of au
 au ColorScheme * hi Error ctermfg=9 ctermbg=10 guifg=White guibg=Red
 
+set nomodeline
+
 " Fuzzy finder: ignore stuff that can't be opened, and generated files
 let g:fuzzy_ignore = "*.png;*.PNG;*.JPG;*.jpg;*.GIF;*.gif;vendor/**;coverage/**;tmp/**;rdoc/**"
 
@@ -214,9 +216,6 @@ nmap <leader>d :TagbarToggle<CR>
 "https://github.com/ryanoasis/vim-devicons/issues/130
 "let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-
-"sane map for emmet
-imap <C-E> <C-Y>,
 
 " disable mappings in elm package
 let g:elm_setup_keybindings = 0

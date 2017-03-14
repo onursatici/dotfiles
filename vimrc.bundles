@@ -34,12 +34,8 @@ Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'Raimondi/delimitMate'
 " add comments easier
 Bundle 'scrooloose/nerdcommenter'
-" emmet type expansions in vim
-Bundle 'mattn/emmet-vim'
 " requires ctags. Adds pane to show file tags
 Bundle 'majutsushi/tagbar'
-" for OSX, copy the selection as RTF to the clipboard
-Bundle 'zerowidth/vim-copy-as-rtf'
 " base16 colorscheme support
 Bundle 'chriskempson/base16-vim'
 " unicode icons for files in NERDTree and airline

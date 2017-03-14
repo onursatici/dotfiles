@@ -62,5 +62,5 @@ alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exc
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-alias googler="googler --colors 'GEfgxf'"
+alias googler="googler --colors 'GEfgxj'"
 
