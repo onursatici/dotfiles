@@ -1,29 +1,12 @@
 # Unix
-alias tlf="tail -f"
 alias ln='ln -v'
 alias mkdir='mkdir -p'
-alias ...='../..'
 alias l='ls'
 alias ll='ls -al'
 alias lh='ls -Alh'
-alias pyg="pygmentize"
-alias -g G='| grep'
-alias -g L='| less'
-alias -g A='| ag'
-#alias -g P='| pygmentize -l'
-alias -g ONE="| awk '{ print \$1}'"
-alias e="$EDITOR"
-alias v="$VISUAL"
-alias c='clear'
 
-#tree
-alias tre="tree -I 'node_modules'"
-
-# fix for passing params to rake tasks
-alias rake='noglob rake'
 
 # git
-alias g='git'
 alias gs='git status -sb'
 alias gdiff='git difftool $(git rev-parse HEAD~1) $(git rev-parse HEAD)'
 
@@ -39,7 +22,6 @@ alias matlabs="/Applications/MATLAB_R2014b.app/bin/matlab -nojvm -nodisplay -nos
 alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
 
 #custom
-alias workspace="cd ~/Documents/workspace"
 alias til="cd ~/Documents/workspace/learning/til"
 alias dev="/usr/local/dev-env/bin/dev"
 
@@ -74,10 +56,11 @@ alias ql="qlmanage -p 2>/dev/null"
 #today's date helper
 alias -g today=$(echo `date +%Y%m%d`.md)
 
-# Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
-
 # ctags
 alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor"
 
+# Include custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+alias googler="googler --colors 'GEfgxf'"
 
