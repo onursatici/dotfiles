@@ -51,8 +51,8 @@ path=(
 export PATH=".git/safe/../../bin:$PATH"
 export PATH="$PATH:/opt/local/bin"
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export GOPATH="/Users/onursatici/go/bin"
-export PATH="$PATH:$GOPATH"
+export GOPATH="/Volumes/git/go"
+export PATH="$PATH:$GOPATH/bin"
 # include php 5.6 path
 export PATH="/usr/local/php5/bin:$PATH"
 # override system zsh
