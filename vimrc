@@ -15,7 +15,7 @@ filetype plugin indent on
 
 set ttyfast
 set lazyredraw
-set clipboard=unnamed
+set clipboard+=unnamed
 
 :au FocusLost * :wa "Save on focus lost
 
@@ -70,7 +70,10 @@ set background=dark
 set encoding=utf-8
 colorscheme base16-default
 " fix error highlighting in Error group, TODO: move this to colorscheme file, get rid of au
-au ColorScheme * hi Error ctermfg=9 ctermbg=10 guifg=White guibg=Red
+au ColorScheme * hi! link Error airline_y_red
+au ColorScheme * hi! link Search airline_y_bold
+
+hi link Error Search
 
 set nomodeline
 
@@ -153,8 +156,6 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
-"" Treat <li> and <p> tags like the block tags they are
-"let g:html_indent_tags = 'li\|p'
 
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
@@ -212,10 +213,16 @@ vnoremap <C-V>     v
 nmap <leader>d :TagbarToggle<CR>
 
 "set folder glyphs on
-"below line does not work for new NerdTree versions
 "https://github.com/ryanoasis/vim-devicons/issues/130
-"let g:DevIconsEnableFoldersOpenClose = 1
 let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " disable mappings in elm package
 let g:elm_setup_keybindings = 0
+
+" java highlighting
+let java_highlight_functions = 1
+let java_highlight_java_lang_ids=1
+let java_highlight_debug=1
+" tag highlighting mapping, also updates tags
+map <leader>t :UpdateTypesFile<CR>
+

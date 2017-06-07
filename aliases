@@ -59,8 +59,11 @@ alias -g today=$(echo `date +%Y%m%d`.md)
 # ctags
 alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor"
 
+# docker
+alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias drm='docker rm -f $(docker ps -aq) && docker network ls -qf type=custom | xargs docker network rm'
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
 
-alias googler="googler --colors 'GEfgxj'"
 

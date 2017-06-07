@@ -40,6 +40,8 @@ Bundle 'majutsushi/tagbar'
 Bundle 'chriskempson/base16-vim'
 " unicode icons for files in NERDTree and airline
 Bundle 'ryanoasis/vim-devicons'
+" highlight tags - use this mirror as the vim-scripts one doesn't have scala
+Bundle 'abudden/taghighlight-automirror'
 
 " syntax / filetype supports
 Bundle 'mustache/vim-mustache-handlebars'
