@@ -49,31 +49,28 @@ set nobackup
 set nowritebackup
 set noswapfile    " http://robots.thoughtbot.com/post/18739402579/global-gitignore#comment-458413287
 set history=500
-set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set hlsearch      " highlight matches
 set laststatus=2  " Always display the status line
-set autowrite     " Automatically :write before running commands
 " Softtabs, 2 spaces
 set tabstop=2
 set shiftwidth=2
 set expandtab
-" Display extra whitespace
+" insert tab with shift-tab
+inoremap <S-Tab> <C-V><Tab>
+" Display extra whitespace and tabs
 set list listchars=tab:»·,trail:·
 set t_Co=256
-:set smartcase
-:set ignorecase
-:set noantialias
+set smartcase
+set ignorecase
 " color theme
 set background=dark
 set encoding=utf-8
 colorscheme base16-default
-" fix error highlighting in Error group, TODO: move this to colorscheme file, get rid of au
+" make error and search look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
-
-hi link Error Search
 
 set nomodeline
 

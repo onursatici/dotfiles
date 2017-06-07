@@ -26,8 +26,6 @@ Bundle 'bling/vim-airline'
 Bundle 'scrooloose/nerdtree'
 " syntax check for various filetypes
 Bundle "scrooloose/syntastic"
-" map all motions to a letter for fast navigation
-Bundle 'Lokaltog/vim-easymotion'
 " unify window switching shortcuts for vim and tmux
 Bundle 'christoomey/vim-tmux-navigator'
 " add auto closing of paranthesis on insert mode
