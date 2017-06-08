@@ -20,7 +20,6 @@ bindkey "^R" history-incremental-search-backward
 bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
-bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
@@ -29,38 +28,13 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 export VISUAL=vim
 export EDITOR=$VISUAL
 
-# look for ey config in project dirs
-export EYRC=./.eyrc
-
-# load rbenv if available
-if which rbenv &>/dev/null ; then
-  eval "$(rbenv init - --no-rehash)"
-fi
-
-
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
-
 set -o vi
 
-
-# Determine size of a file or total size of a directory
-function fs() {
-  if du -b /dev/null > /dev/null 2>&1; then
-    local arg=-sbh;
-  else
-    local arg=-sh;
-  fi
-  if [[ -n "$@" ]]; then
-    du $arg -- "$@";
-  else
-    du $arg .[^.]* *;
-  fi;
-}
-
+# make ag call tag by default
 if (( $+commands[tag] )); then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
   alias ag=tag
 fi
-source /usr/local/dev-env/bin/profile

@@ -8,18 +8,6 @@ alias lh='ls -Alh'
 
 # git
 alias gs='git status -sb'
-alias gdiff='git difftool $(git rev-parse HEAD~1) $(git rev-parse HEAD)'
-
-# Bundler
-alias b="bundle"
-alias bi="bundle install"
-alias be="bundle exec"
-alias kbundle="bundle"
-
-
-#matlab
-alias matlabs="/Applications/MATLAB_R2014b.app/bin/matlab -nojvm -nodisplay -nosplash"
-alias matlab="/Applications/MATLAB_R2014b.app/bin/matlab  -nodisplay -nosplash"
 
 #custom
 alias til="cd ~/Documents/workspace/learning/til"
@@ -65,5 +53,3 @@ alias drm='docker rm -f $(docker ps -aq) && docker network ls -qf type=custom | 
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
-
-
