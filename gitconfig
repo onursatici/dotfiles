@@ -17,3 +17,5 @@
 [mergetool "vimdiff"]
 [credential]
 	helper = osxkeychain
+[include]
+  path = ~/.gitconfig-local
