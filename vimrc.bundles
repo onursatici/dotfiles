@@ -7,58 +7,56 @@
 call vundle#rc()
 
 " Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 " bunch of default set calls to make vim sane
-Bundle 'tpope/vim-sensible' 
-" enhances % match to include tags
-Bundle 'tmhedberg/matchit'
+Plugin 'tpope/vim-sensible' 
 " git integration
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 " show modified lines from the last commit
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 " search with ag from vim
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 " open files in current working directory with fuzzy search, using ctrl-p. can also be customized to use ag
-Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 " append information about the file on the bottom buffer bar
-Bundle 'bling/vim-airline'
+Plugin 'bling/vim-airline'
 " file directory tree
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 " syntax check for various filetypes
-Bundle "scrooloose/syntastic"
+Plugin 'scrooloose/syntastic'
 " unify window switching shortcuts for vim and tmux
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 " add auto closing of paranthesis on insert mode
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 " add comments easier
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 " requires ctags. Adds pane to show file tags
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 " base16 colorscheme support
-Bundle 'chriskempson/base16-vim'
+Plugin 'chriskempson/base16-vim'
 " unicode icons for files in NERDTree and airline
-Bundle 'ryanoasis/vim-devicons'
+Plugin 'ryanoasis/vim-devicons'
 " highlight tags - use this mirror as the vim-scripts one doesn't have scala
-Bundle 'abudden/taghighlight-automirror'
+Plugin 'abudden/taghighlight-automirror'
 
 " syntax / filetype supports
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle "tpope/vim-haml"
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'jelera/vim-javascript-syntax'
-Bundle 'wavded/vim-stylus'
-Bundle 'toyamarinyon/vim-swift'
-Bundle 'digitaltoad/vim-jade'
-Bundle 'octol/vim-cpp-enhanced-highlight'
-Bundle 'elixir-lang/vim-elixir'
-Bundle 'briancollins/vim-jst'
-Bundle 'leafgarland/typescript-vim'
-Bundle 'vim-scripts/groovy.vim'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'ianks/vim-tsx'
-Bundle 'rust-lang/rust.vim'
-Bundle 'cespare/vim-toml'
-Bundle 'cstrahan/vim-capnp'
-Bundle 'ElmCast/elm-vim'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-haml'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'jelera/vim-javascript-syntax'
+Plugin 'wavded/vim-stylus'
+Plugin 'toyamarinyon/vim-swift'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'briancollins/vim-jst'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'groovy.vim'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'ianks/vim-tsx'
+Plugin 'rust-lang/rust.vim'
+Plugin 'cespare/vim-toml'
+Plugin 'cstrahan/vim-capnp'
+Plugin 'ElmCast/elm-vim'
 
 filetype on
