@@ -20,7 +20,8 @@ $ brew install reattach-to-user-namespace
 $ brew install tmux
 ```
 
-install vim plugins via :PluginInstall on vim
+clone vundle to `~/.vim/bundle/Vundle.vim`
+install vim plugins via `:PluginInstall` on vim
 
 get iterm2 and choose a base 16 color scheme for it
 
@@ -30,13 +31,7 @@ single fonts by using:
 $ svn export https://github.com/ryanoasis/nerd-fonts/trunk/path/to/font.ttf
 ```
 
-### Gitconfig
-don't forget to change the name in gitconfig with your username
-
 ### Recommended
 
 **Prezto**  
 Use Prezto instead of Bash. info & installation instructions here: https://github.com/sorin-ionescu/prezto
-
----
-These are a heavily modified version of Thoughtbot's dotfiles. More detailed instructions are available here: http://github.com/thoughtbot/dotfiles.
