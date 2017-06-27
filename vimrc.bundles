@@ -14,8 +14,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-fugitive'
 " show modified lines from the last commit
 Plugin 'airblade/vim-gitgutter'
-" search with ag from vim
-Plugin 'rking/ag.vim'
+" search with ack from vim
+Plugin 'mileszs/ack.vim'
 " open files in current working directory with fuzzy search, using ctrl-p. can also be customized to use ag
 Plugin 'ctrlpvim/ctrlp.vim'
 " append information about the file on the bottom buffer bar

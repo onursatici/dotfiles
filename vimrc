@@ -56,7 +56,6 @@ augroup END
 let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
 let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 " better java highlighting, these exist on default java.vim syntax file
-let java_highlight_functions = 1
 let java_highlight_java_lang_ids=1
 let java_highlight_debug=1
 
@@ -69,6 +68,8 @@ colorscheme base16-default
 " make error and search highlights look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
+au ColorScheme * hi! link Interface SpecialChar
+au ColorScheme * hi! link Method Function
 
 
 " KEY CUSTOMIZATIONS
@@ -88,7 +89,7 @@ map <leader>n :nohl<CR>
 " tagbar
 nmap <leader>d :TagbarToggle<CR>
 " tag highlighting mapping, also updates tags
-map <leader>t :UpdateTypesFile<CR>
+map <leader>T :UpdateTypesFile<CR>
 nnoremap <leader>e :SyntasticCheck<CR>
 "alt + [hjkl] to resize splits
 map ¬ <C-W>>
@@ -103,7 +104,10 @@ vnoremap <C-V>     v
 " insert tab with shift-tab
 inoremap <S-Tab> <C-V><Tab>
 " bind K to search word under cursor with ag (done via Ag.vim)
-nnoremap K :Ag "\b<C-R><C-W>\b"<CR>
+map <leader>k :Ack! "\b<C-R><C-W>\b"<CR>
+" mru and tags mode
+map <leader>m :CtrlPMRU<CR>
+map <leader>t :CtrlPTag<CR>
 
 
 " PLUGIN CUSTOMIZATIONS
@@ -115,6 +119,8 @@ if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l -g ""'
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
+  " make ack.vim use ag instead
+  let g:ackprg = 'ag --vimgrep --smart-case'
 endif
 " Tab completion for insert mode
 " will insert tab at beginning of line,

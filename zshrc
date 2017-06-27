@@ -36,5 +36,4 @@ set -o vi
 # make ag call tag by default
 if (( $+commands[tag] )); then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
-  alias ag=tag
 fi

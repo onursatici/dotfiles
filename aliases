@@ -41,8 +41,8 @@ fi
 #quicklook alias
 alias ql="qlmanage -p 2>/dev/null"
 
-#today's date helper
-alias -g today=$(echo `date +%Y%m%d`.md)
+#make ag call tag (https://github.com/aykamko/tag)
+alias ag=tag
 
 # ctags
 alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor"
