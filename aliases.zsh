@@ -50,6 +50,11 @@ alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exc
 # docker
 alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
 alias drm='docker rm -f $(docker ps -aq) && docker network ls -qf type=custom | xargs docker network rm'
+function dsh() {
+  [[ $# -ne 1 ]] && echo "usage: dsh 'name-of-running-container' " && return
+  ids=($(docker ps --format "{{.ID}}" --filter "name=$1"))
+  docker exec -it $ids[1] /bin/bash
+}
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

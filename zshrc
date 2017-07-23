@@ -29,7 +29,7 @@ export VISUAL=vim
 export EDITOR=$VISUAL
 
 # aliases
-[[ -f ~/.aliases ]] && source ~/.aliases
+[[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
 set -o vi
 
