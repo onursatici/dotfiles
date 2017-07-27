@@ -1,11 +1,3 @@
-"filetype on
-
-"set nocompatible
-
-"filetype off
-"set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 " bunch of default set calls to make vim sane
@@ -58,5 +50,4 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'cespare/vim-toml'
 Plugin 'cstrahan/vim-capnp'
 Plugin 'ElmCast/elm-vim'
-
-filetype on
+Plugin 'dylon/vim-antlr'

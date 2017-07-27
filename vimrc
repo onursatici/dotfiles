@@ -58,6 +58,18 @@ let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
 " better java highlighting, these exist on default java.vim syntax file
 let java_highlight_java_lang_ids=1
 let java_highlight_debug=1
+" Tab completion for insert mode
+" will insert tab at beginning of line,
+" will use completion if not at beginning
+function! InsertTabWrapper()
+    let col = col('.') - 1
+    if !col || getline('.')[col - 1] !~ '\k'
+        return "\<tab>"
+    else
+        return "\<c-p>"
+    endif
+endfunction
+inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 
 " COLORSCHEME
@@ -122,19 +134,6 @@ if executable('ag')
   " make ack.vim use ag instead
   let g:ackprg = 'ag --vimgrep --smart-case'
 endif
-" Tab completion for insert mode
-" will insert tab at beginning of line,
-" will use completion if not at beginning
-" requires ctrlp
-function! InsertTabWrapper()
-    let col = col('.') - 1
-    if !col || getline('.')[col - 1] !~ '\k'
-        return "\<tab>"
-    else
-        return "\<c-p>"
-    endif
-endfunction
-inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 " airline
 let g:airline_powerline_fonts = 1
