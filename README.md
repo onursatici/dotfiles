@@ -2,7 +2,7 @@
 dotfiles
 ===================
 
-## Installation
+## Installation (Mac OS X)
 
 Clone this repo (or your own fork!) to your home directory.
 ```
@@ -13,8 +13,9 @@ symlink files in the dotfiles folder
 ```
 $ sh dotfiles/install/install.sh
 ```
-install MacVim, reattach-to-user-namespace and tmux
+install Xcode command line tools, MacVim, reattach-to-user-namespace and tmux
 ```
+$ xcode-select --install
 $ brew install macvim --override-system-vim
 $ brew install reattach-to-user-namespace
 $ brew install tmux
