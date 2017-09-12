@@ -149,7 +149,7 @@ let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_javac_config_file_enabled = 1
 " disable active mode for java
-let g:syntastic_mode_map = {'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['java'] }
+let g:syntastic_mode_map = {'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['java', 'scala'] }
 
 "set folder glyphs on
 "https://github.com/ryanoasis/vim-devicons/issues/130
