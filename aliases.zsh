@@ -56,5 +56,10 @@ function dsh() {
   docker exec -it $ids[1] /bin/bash
 }
 
+# mac y u no
+function pwdx {
+  lsof -a -p $1 -d cwd -n | tail -1 | awk '{print $NF}'
+}
+
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local

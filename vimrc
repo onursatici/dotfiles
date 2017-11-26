@@ -76,7 +76,7 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " using any base16 dark palette
 " ----------------------------------------------------------
 set background=dark
-colorscheme base16-default
+colorscheme base16-default-dark
 " make error and search highlights look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
@@ -148,6 +148,7 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_javac_config_file_enabled = 1
+let g:syntastic_typescript_tsc_fname = ''
 " disable active mode for java
 let g:syntastic_mode_map = {'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['java', 'scala'] }
 
