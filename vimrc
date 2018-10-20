@@ -41,6 +41,7 @@ set wildmode=list:longest,list:full " tab completion for command line
 " more specific modifications
 " ----------------------------------------------------------
 augroup vimrcEx
+  autocmd!
   autocmd InsertLeave * set nopaste                 " exist paste mode when leaving insert mode
   autocmd FileType * setlocal formatoptions-=cro    " disable auto-commeting on new line
   autocmd FileType markdown setlocal spell          " enable spelling for markdown
@@ -115,25 +116,22 @@ vnoremap    v   <C-V>
 vnoremap <C-V>     v
 " insert tab with shift-tab
 inoremap <S-Tab> <C-V><Tab>
-" bind K to search word under cursor with ag (done via Ag.vim)
-map <leader>k :Ack! "\b<C-R><C-W>\b"<CR>
-" mru and tags mode
-map <leader>m :CtrlPMRU<CR>
-map <leader>t :CtrlPTag<CR>
+" fzf
+map <leader>a :Ag <C-R><C-W><CR>
+map <leader>f :Files<CR>
+map <leader>h :History<CR>
+map <leader>t :Tags<CR>
+augroup goMappings
+  autocmd!
+  autocmd FileType go map <buffer> <leader>g <Plug>(go-def)
+  autocmd FileType go map <buffer> <leader>i <Plug>(go-implements)
+  autocmd FileType go map <buffer> <leader>u <Plug>(go-referrers)
+augroup END
 
 
 " PLUGIN CUSTOMIZATIONS
 " modifications on plugin options
 " ----------------------------------------------------------
-" ctrlp
-if executable('ag')
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -g ""'
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-  " make ack.vim use ag instead
-  let g:ackprg = 'ag --vimgrep --smart-case'
-endif
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -145,6 +143,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 " syntastic
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_go_checkers = ['go']
 let g:syntastic_enable_signs=1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_java_javac_config_file_enabled = 1
@@ -158,3 +157,27 @@ let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " disable mappings in elm package
 let g:elm_setup_keybindings = 0
+
+" vim-go
+let g:go_highlight_extra_types = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_types = 1
+let g:go_def_mapping_enabled = 0
+let g:go_def_mode = 'godef'
+" fzf
+set rtp+=/usr/local/opt/fzf
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }

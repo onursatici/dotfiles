@@ -45,7 +45,7 @@ alias ql="qlmanage -p 2>/dev/null"
 alias ag=tag
 
 # ctags
-alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor"
+alias tags="ctags -R --exclude=build --exclude=.git --exclude=node_modules --exclude=vendor --exclude=target"
 
 # docker
 alias dps='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'

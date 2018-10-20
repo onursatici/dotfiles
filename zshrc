@@ -31,9 +31,13 @@ export EDITOR=$VISUAL
 # aliases
 [[ -f ~/.aliases.zsh ]] && source ~/.aliases.zsh
 
-set -o vi
+set -o emacs
 
 # make ag call tag by default
 if (( $+commands[tag] )); then
   tag() { command tag "$@"; source ${TAG_ALIAS_FILE:-/tmp/tag_aliases} 2>/dev/null }
+fi
+
+if (( $+commands[kubectl] )); then
+  source <(kubectl completion zsh)
 fi
