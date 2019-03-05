@@ -76,8 +76,10 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 " COLORSCHEME
 " using any base16 dark palette
 " ----------------------------------------------------------
-set background=dark
-colorscheme base16-default-dark
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 " make error and search highlights look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
@@ -99,8 +101,6 @@ map <leader>. :bn<CR>
 map <leader>, :bp<CR>
 " remove search highlights, exists in sensible.vim but hardcoded to <C-L>
 map <leader>n :nohl<CR>
-" tagbar
-nmap <leader>d :TagbarToggle<CR>
 " tag highlighting mapping, also updates tags
 map <leader>T :UpdateTypesFile<CR>
 nnoremap <leader>e :SyntasticCheck<CR>
@@ -129,11 +129,17 @@ augroup goMappings
 augroup END
 
 
+augroup rustMapping
+  au FileType rust map <buffer> <leader>g <Plug>(rust-def)
+augroup END
+
+
 " PLUGIN CUSTOMIZATIONS
 " modifications on plugin options
 " ----------------------------------------------------------
 
 " airline
+let g:airline_theme='base16'
 let g:airline_powerline_fonts = 1
 let g:airline_left_sep=''
 let g:airline_left_alt_sep=''

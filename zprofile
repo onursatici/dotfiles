@@ -41,12 +41,14 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-export GOPATH="/Volumes/git/go"
+export GOPATH="$HOME/.go"
 
 # Set the list of directories that Zsh searches for programs.
 path=(
   /usr/local/{bin,sbin}
   $GOPATH/bin
+  $HOME/.cargo/bin
+  /Users/$(whoami)/Library/Python/3.7/bin
   $path
 )
 

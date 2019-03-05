@@ -2,7 +2,6 @@
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
-
 export PROMPT='%B%F{yellow}$%f%b %B%F{white}%c%f%b '
 export SPROMPT='zsh: correct %F{1}%R%f to %F{2}%r%f [nyae]? '
 
@@ -41,3 +40,9 @@ fi
 if (( $+commands[kubectl] )); then
   source <(kubectl completion zsh)
 fi
+
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+        eval "$("$BASE16_SHELL/profile_helper.sh")"
