@@ -3,7 +3,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="aliases.zsh tmux.conf vimrc gvimrc agignore zshrc zlogin zpreztorc zprofile zshenv gitconfig vimrc.bundles gitignore ctags.d"    # list of files/folders to symlink in homedir
+files="aliases.zsh tmux.conf vimrc agignore zshrc zlogin zpreztorc zprofile zshenv gitconfig vimrc.bundles gitignore ctags.d"    # list of files/folders to symlink in homedir
 
 # create dotfiles_old in homedir
 echo -n "Creating $olddir for backup of any existing dotfiles in ~ ..."

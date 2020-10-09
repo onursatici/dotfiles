@@ -21,3 +21,8 @@
   path = ~/.gitconfig-local
 [merge]
 	conflictstyle = diff3
+[user]
+	email = onursatici@gmail.com
+	name = Onur Satici
+[pull]
+	ff = only

@@ -85,6 +85,8 @@ au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
 au ColorScheme * hi! link Interface SpecialChar
 au ColorScheme * hi! link Method Function
+" remove underline from line numbers
+au ColorScheme * hi! link CursorLineNr bold
 
 
 " KEY CUSTOMIZATIONS
@@ -130,7 +132,7 @@ augroup END
 
 
 augroup rustMapping
-  au FileType rust map <buffer> <leader>g <Plug>(rust-def)
+  "au FileType rust map <buffer> <leader>g <Plug>(rust-def)
 augroup END
 
 
@@ -155,7 +157,7 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_java_javac_config_file_enabled = 1
 let g:syntastic_typescript_tsc_fname = ''
 " disable active mode for java
-let g:syntastic_mode_map = {'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['java', 'scala'] }
+let g:syntastic_mode_map = {'mode': 'active', 'active_filetypes': [], 'passive_filetypes': ['java', 'scala', 'rust'] }
 
 "set folder glyphs on
 "https://github.com/ryanoasis/vim-devicons/issues/130
@@ -187,3 +189,12 @@ let g:fzf_colors =
   \ 'marker':  ['fg', 'Keyword'],
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
+" ycm rust
+let s:lsp = '/home/osatici/work/lsp-examples/home/osatici/work/lsp-examples'
+let g:ycm_language_server = [
+  \   { 'name': 'rust',
+  \     'filetypes': [ 'rust' ],
+  \     'cmdline': [ expand( s:lsp .  '/rust/rust-analyzer/target/release/rust-analyzer' ) ],
+  \     'project_root_files': [ 'Cargo.toml' ],
+  \   },
+  \ ]

@@ -26,7 +26,7 @@ then
     alias as='colourify as'
     alias gas='colourify gas'
     alias ld='colourify ld'
-    alias netstat='colourify netstat'
+    alias ss='colourify ss'
     alias ping='colourify ping'
     alias traceroute='colourify /usr/sbin/traceroute'
     alias head='colourify head'
@@ -36,6 +36,7 @@ then
     alias ps='colourify ps'
     alias mtr='colourify mtr'
     alias df='colourify df'
+    alias ls-'colourify ls'
 fi
 
 #quicklook alias

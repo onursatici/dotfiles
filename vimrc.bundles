@@ -29,6 +29,9 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'abudden/taghighlight-automirror'
 Plugin 'fatih/vim-go'
 
+" code completion
+Plugin 'ycm-core/YouCompleteMe'
+
 " syntax / filetype supports
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'tpope/vim-haml'
@@ -45,7 +48,6 @@ Plugin 'groovy.vim'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'ianks/vim-tsx'
 Plugin 'rust-lang/rust.vim'
-Plugin 'racer-rust/vim-racer'
 Plugin 'cespare/vim-toml'
 Plugin 'cstrahan/vim-capnp'
 Plugin 'ElmCast/elm-vim'
