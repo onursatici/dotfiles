@@ -1,7 +1,7 @@
 # Unix
 alias ln='ln -v'
 alias mkdir='mkdir -p'
-alias l='ls'
+alias l='exa -snew -lg --git --icons'
 alias ll='ls -al'
 alias lh='ls -Alh'
 

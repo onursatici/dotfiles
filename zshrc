@@ -41,6 +41,10 @@ if (( $+commands[kubectl] )); then
   source <(kubectl completion zsh)
 fi
 
+if (( $+commands[bat] )); then
+  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \

@@ -27,7 +27,6 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'ryanoasis/vim-devicons'
 " highlight tags - use this mirror as the vim-scripts one doesn't have scala
 Plugin 'abudden/taghighlight-automirror'
-Plugin 'fatih/vim-go'
 
 " code completion
 Plugin 'ycm-core/YouCompleteMe'
@@ -52,3 +51,4 @@ Plugin 'cespare/vim-toml'
 Plugin 'cstrahan/vim-capnp'
 Plugin 'ElmCast/elm-vim'
 Plugin 'dylon/vim-antlr'
+Plugin 'fatih/vim-go'
