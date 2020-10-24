@@ -7,6 +7,7 @@ Plugin 'tpope/vim-fugitive'
 " show modified lines from the last commit
 Plugin 'airblade/vim-gitgutter'
 " fuzzy file search
+Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 " append information about the file on the bottom buffer bar
 Plugin 'vim-airline/vim-airline'

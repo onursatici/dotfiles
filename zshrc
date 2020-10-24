@@ -42,7 +42,12 @@ if (( $+commands[kubectl] )); then
 fi
 
 if (( $+commands[bat] )); then
+  export BAT_THEME="base16"
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+fi
+
+if (( $+commands[starship] )); then
+  eval "$(starship init zsh)"
 fi
 
 # Base16 Shell
@@ -50,3 +55,9 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if (( $+commands[fzf] )); then
+  export FZF_DEFAULT_OPTS="--color=16 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (exa -snew -lgT --git --icons --color=always {} | less)) || echo {} 2> /dev/null | head -200'"
+fi

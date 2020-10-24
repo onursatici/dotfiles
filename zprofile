@@ -41,7 +41,7 @@ typeset -gU cdpath fpath mailpath path
 #   $cdpath
 # )
 
-export GOPATH="/Volumes/git/go"
+export GOPATH="/home/osatici/.go"
 
 # Set the list of directories that Zsh searches for programs.
 path=(

@@ -26,7 +26,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab                       " soft tabs
 set list listchars=tab:»·,trail:·   " override sensibles characters for tab and trailing space
-set t_Co=256                        " 256 colors
+"set t_Co=256                        " 256 colors
 set smartcase ignorecase            " case insensitive if all lower, sensitive if at least one capital on search
 set nomodeline                      " turn off modelines for security reasons
 set display+=uhex                   " display hex codes for non printable characters
@@ -73,13 +73,9 @@ endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 
-" COLORSCHEME
-" using any base16 dark palette
-" ----------------------------------------------------------
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+" using any base16 dark palette from base16-shell
+let base16colorspace=256
+colorscheme base16-default-dark-2
 " make error and search highlights look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
@@ -172,23 +168,6 @@ let g:go_highlight_functions = 1
 let g:go_highlight_types = 1
 let g:go_def_mapping_enabled = 0
 let g:go_def_mode = 'godef'
-" fzf
-set rtp+=/usr/local/opt/fzf
-" Customize fzf colors to match your color scheme
-let g:fzf_colors =
-\ { 'fg':      ['fg', 'Normal'],
-  \ 'bg':      ['bg', 'Normal'],
-  \ 'hl':      ['fg', 'Comment'],
-  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
-  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
-  \ 'hl+':     ['fg', 'Statement'],
-  \ 'info':    ['fg', 'PreProc'],
-  \ 'border':  ['fg', 'Ignore'],
-  \ 'prompt':  ['fg', 'Conditional'],
-  \ 'pointer': ['fg', 'Exception'],
-  \ 'marker':  ['fg', 'Keyword'],
-  \ 'spinner': ['fg', 'Label'],
-  \ 'header':  ['fg', 'Comment'] }
 " ycm rust
 let s:lsp = '/home/osatici/work/lsp-examples/home/osatici/work/lsp-examples'
 let g:ycm_language_server = [
