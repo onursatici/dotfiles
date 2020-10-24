@@ -42,6 +42,7 @@ if (( $+commands[kubectl] )); then
 fi
 
 if (( $+commands[bat] )); then
+  export BAT_THEME='base16'
   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 fi
 
@@ -50,3 +51,10 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if (( $+commands[fzf] )); then
+  export FZF_DEFAULT_OPTS="--color=16"
+  export FZF_ALT_C_COMMAND="fd -t d . . /Volumes/git"
+fi

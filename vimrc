@@ -74,12 +74,11 @@ inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
 
 " COLORSCHEME
-" using any base16 dark palette
-" ----------------------------------------------------------
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+let base16colorspace=256
+" copy of base16-default-dark without the `has(terminal)` block,
+" also with g:colors_name = "base16-default-dark-2"
+" which conflicts with fzf
+source ~/dotfiles/base16-default-dark-no-term.vim
 " make error and search highlights look less intimidating
 au ColorScheme * hi! link Error airline_y_red
 au ColorScheme * hi! link Search airline_y_bold
