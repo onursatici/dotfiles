@@ -59,5 +59,6 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if (( $+commands[fzf] )); then
-  export FZF_DEFAULT_OPTS="--color=16 --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (exa -snew -lgT --git --icons --color=always {} | less)) || echo {} 2> /dev/null | head -200'"
+  export FZF_DEFAULT_OPTS="--color=16"
+  export FZF_ALT_C_COMMAND="fd -t d . . ~/work"
 fi
